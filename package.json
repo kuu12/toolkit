@@ -1,0 +1,24 @@
+{
+  "name": "toolkit",
+  "version": "1.0.0",
+  "description": "A utility functions set in daily development.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuu12/toolkit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kuu12/toolkit/issues"
+  },
+  "homepage": "https://github.com/kuu12/toolkit#readme"
+}
