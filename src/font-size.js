@@ -44,7 +44,7 @@ function createFontSize(
         (screenUpper - screenLower) *
         (index / divide);
 
-    const calsFontSize = screen =>
+    const calcFontSize = screen =>
         fontSizeLower +
         (fontSizeUpper - fontSizeLower) *
         (screen - screenLower) /
@@ -62,7 +62,7 @@ function createFontSize(
         .sort((a, b) => a - b)
         .map(screen => [
             screen,
-            calsFontSize(screen),
+            calcFontSize(screen),
         ])
         .map(([screen, fontSize]) => [
             screen.toFixed(4),
