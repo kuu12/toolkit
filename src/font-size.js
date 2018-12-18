@@ -1,10 +1,10 @@
 export default createFontSize;
 
 /**
- * Create a series of font size styles. 
+ * Create a series of font size styles.
  * For example, execute in console:
  *      createFontSize([320, 375, 411, 667, 750], [42.6666, 100], 5);
- * 
+ *
  * Outputs:
  *      "@media (min-width: 320.0000px) { html { font-size: 42.6666px; } }
  *      @media (min-width: 375.0000px) { html { font-size: 49.9999px; } }
@@ -21,14 +21,14 @@ export default createFontSize;
  *                                              you would like to match, and the last element is the upper boundary.
  *                                              Also, you can specific some familiar screen sizes, telling this function
  *                                              these screens need to be specific exact font sizes.
- * 
+ *
  * @param       {Array}         fontSizes       An array that contains 2 element. The first is minimum font size,
  *                                              the second is maximal font size.
- * 
+ *
  * @param       {number = 20}   divide          Between the minimum screen and maximal screen, how many screen that
  *                                              you want to automatically create and specific a adaptive font size.
- * 
- * @return      {string}                        Styles. Copy and paste them into your project.                                                       
+ *
+ * @return      {string}                        Styles. Copy and paste them into your project.
  */
 
 function createFontSize(
