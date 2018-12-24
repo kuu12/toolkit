@@ -53,7 +53,7 @@ const FontSize = (screenList, sizeOf750px = 1, step = 20) =>
                 set.push(screen);
                 screen += step;
             } while (
-                index < screenList.length &&
+                index + 1 < screenList.length &&
                 screen <= screenList[index + 1]
             );
             return set;
