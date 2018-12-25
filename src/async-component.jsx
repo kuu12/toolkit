@@ -1,14 +1,11 @@
 import React from 'react';
 
-const AsyncComponent = importer => name =>
+const AsyncComponent = importer => (name = 'default') =>
     class extends React.Component {
-        componentDidMount() {
-            importer().then(chunk => {
-                this.C_ = chunk[name || 'default'];
-                this.forceUpdate();
-            });
+        async componentDidMount() {
+            this.C_ = (await importer())[name];
+            this.forceUpdate();
         }
-
         render() {
             return this.C_
                 ? <this.C_ {...this.props} />
