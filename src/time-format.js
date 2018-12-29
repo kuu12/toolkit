@@ -10,7 +10,6 @@ function timeFormat(date, format = 'yyyy-MM-dd hh:mm:ss') {
     const SECONDS = date.getSeconds();
     const DAY = WEEK_DAY[date.getDay()];
     const MILLISECONDS = date.getMilliseconds();
-    const WEEK_DAY = ['日', '一', '二', '三', '四', '五', '六'];
 
     return format
         .replace(/yyyy/i, YEAR)
@@ -30,17 +29,11 @@ function timeFormat(date, format = 'yyyy-MM-dd hh:mm:ss') {
         .replace(/w/i, DAY);
 };
 
-const pad = (number, length) =>
-    number.toString().padStart(length, '0');
-
-function timeRemaining(deadline) {
-    const start = Date.now();
-    const end = new Date(deadline).getTime();
+function timeRemaining(start, end) {
+    start = new Date(start).getTime();
+    end = new Date(end).getTime();
     let milliseconds = Math.max(end - start, 0);
     const timeout = !milliseconds;
-    const SECOND = 1000;
-    const MINUTE = 60 * SECOND;
-    const HOUR = 60 * MINUTE;
     const hours = pad(Math.floor(milliseconds / HOUR), 2);
     milliseconds %= HOUR;
     const minutes = pad(Math.floor(milliseconds / MINUTE), 2);
@@ -50,3 +43,11 @@ function timeRemaining(deadline) {
     milliseconds = pad(Math.floor(milliseconds), 3);
     return { hours, minutes, seconds, milliseconds, timeout };
 };
+
+const SECOND = 1000;
+const MINUTE = 60 * SECOND;
+const HOUR = 60 * MINUTE;
+const WEEK_DAY = ['日', '一', '二', '三', '四', '五', '六'];
+const pad = (number, length) =>
+    number.toString().padStart(length, '0');
+
