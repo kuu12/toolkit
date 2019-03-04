@@ -4,9 +4,7 @@
   "description": "A utility functions set in daily development.",
   "main": "index.js",
   "dependencies": {},
-  "devDependencies": {
-    "babel-cli": "^6.26.0"
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
