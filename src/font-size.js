@@ -45,7 +45,11 @@
  * @return      {string}                        Styles. Copy and paste them into your project.
  */
 
-const FontSize = (screenList, sizeOf750px = 1, step = 20) =>
+const FontSize = (
+    screenList = [320, 375, 411, 667, 750],
+    sizeOf750px = 1,
+    step = 20
+) =>
     screenList
         .map((screen, index) => {
             const set = [];
